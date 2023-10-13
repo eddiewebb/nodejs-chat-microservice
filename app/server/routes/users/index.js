@@ -17,12 +17,15 @@ module.exports = (params, redirectIfLoggedIn) => {
 
   router.post('/signup', async (req, res, next) => {
     const { user } = params;
+    console.log(user)
     try {
       const savedUser = await user.signup(req.body.username, req.body.password);
-
+      console.log("User saved")
       if (savedUser && savedUser.singup) return res.redirect('/?success=true');
       return res.redirect('/users/signup?error=true');
     } catch (err) {
+      console.log("Error")
+      console.log(err)
       return next(err);
     }
   });

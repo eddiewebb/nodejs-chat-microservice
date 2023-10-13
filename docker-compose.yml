@@ -105,7 +105,8 @@ services:
             - PORT=3000
             - SVC_REGISTRY_HOST=serviceregistry
             - SVC_REGISTRY_PORT=3001
-            - REDIS_HOST=redis://redis:6379
+            - REDIS_HOST=redis
+            - REDIS_PORT=6379
             - SESSION_SECRET=1FnCG-otIhXbFcEIV7QKi1-Zq5Cu0rerTnSxtUtfydYBkPjssynrAZOvthSrxcw0OUJZqgmqZq
         volumes:
             - ./app:/opt/app
@@ -113,6 +114,8 @@ services:
             - "3000:3000"
         entrypoint: entrypoint "npm run start"
         tty: true
+        links:
+            - "redis:redis"
 
     mongo:
         build: ./docker/mongo
@@ -137,5 +140,7 @@ services:
             context: ./docker/redis
         expose:
             - "6379"
+        ports:
+            - "6379:6379"
         volumes:
             - ./docker/data/redis:/data
