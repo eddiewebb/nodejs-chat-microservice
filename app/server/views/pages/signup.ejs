@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% include('../partials/head')%>
+    <%- include('../partials/head')%>
     <title><%= locals.title %> Signin</title>
     <link href="/css/signin.css" rel="stylesheet">
   </head>
@@ -24,8 +24,8 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button><br>
       <p>Do you have an account? <a href="/">Sign in</a></p>
       <footer>
-        <% include('../partials/scripts')%>
-        <% include('../partials/footer')%>
+        <%- include('../partials/scripts')%>
+        <%- include('../partials/footer')%>
       </footer>
     </form>
   </body>
