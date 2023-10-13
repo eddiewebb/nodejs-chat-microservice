@@ -1,4 +1,4 @@
-FROM mongo:3.3
+FROM mongo:6.0.11
 
 # Add mongo user
 RUN groupadd -r mongo &&\
