@@ -8,6 +8,7 @@ RUN apt-get update &&\
     apt-get update &&\
     apt-get install -y nodejs 
 
+
 ARG NODE_ENV=production
 ARG NODE_VERSION=latest 
 ARG PROJECT_PATH=/opt/app/
