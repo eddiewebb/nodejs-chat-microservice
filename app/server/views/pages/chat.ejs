@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <% include ../partials/head %>
+  <% include('../partials/head')%>
   <link href="/css/chat.css" rel="stylesheet">
   <title><%= locals.title %> - Chat</title>
 </head>
 
 <body>
-  <% include ../partials/menu %>
+  <% include('../partials/menu')%>
   <div class="container-fluid">
     <div class="row">
       <% const colors = ['primary', 'secondary', 'warning', 'dark']; %>
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <% include ../partials/scripts %>
+  <% include('../partials/scripts')%>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
   <script>
     let timeout;

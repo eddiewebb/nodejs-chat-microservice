@@ -50,7 +50,7 @@ const client = redis.createClient({
   host: process.env.REDIS_HOST,
   port: process.env.REDIS_PORT,
 });
-client.on('error', log.error);
+client.on('error', log.error.bind(log));
 
 if (app.get('env') === 'production') {
   app.set('trust proxy', 'loopback');
