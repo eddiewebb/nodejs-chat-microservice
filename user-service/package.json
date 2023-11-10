@@ -12,7 +12,7 @@
   "author": "Christian David Ibarguen <christianibarguen@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.1",
     "bunyan": "^1.8.12",
